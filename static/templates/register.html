@@ -1,0 +1,228 @@
+
+
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+    <title>Uow Realestate/User Registration Page </title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords"
+        content="Land Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    
+	<script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+	
+    <!-- //Meta tag Keywords -->
+
+    <!-- Custom-Files -->
+    <link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- Bootstrap-Core-CSS -->
+    <link href="/static/css/style.css" rel='stylesheet' type='text/css' />
+    <!-- Style-CSS -->
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Font-Awesome-Icons-CSS -->
+    <!-- //Custom-Files -->
+
+    <!-- Web-Fonts -->
+    <link
+        href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+        rel="stylesheet">
+    <link
+        href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+        rel="stylesheet">
+    <!-- //Web-Fonts -->
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="container">
+            <div class="header d-lg-flex justify-content-between align-items-center py-2 px-sm-2 px-1">
+                <!-- logo -->
+                <div id="logo">
+                    <h1><a href="index.html"><span class="text-bl">Dream Home</span></a></h1>
+                </div>
+                <!-- //logo -->
+                <!-- nav -->
+                <div class="nav_w3ls ml-lg-5">
+                    <nav>
+                        <label for="drop" class="toggle">Menu</label>
+                        <input type="checkbox" id="drop" />
+                        <ul class="menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html">Find a Property</a></li>
+                            <li>
+                                <!-- First Tier Drop Down -->
+                                <label for="drop-2" class="toggle toogle-2">Pages <span class="fa fa-angle-down"
+                                        aria-hidden="true"></span>
+                                </label>
+                                <a href="#">Pages <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                                <input type="checkbox" id="drop-2" />
+                                <ul>
+                                    <li><a href="index.html" class="drop-text">About Us</a></li>
+                                    <li><a href="index.html" class="drop-text">Services</a></li>
+                                    <li><a href="index.html" class="drop-text">Gallery</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="index.html">Blog</a></li>
+                            <li><a href="index.html">Contact Us</a></li>
+                            {% if not logged_in %}
+                            <li><a href="/page/login.html">Login</a></li>
+                            <li><a href="/page/register.html">Register</a></li>
+                            {% endif %}
+                            {% if logged_in %}
+                            <li><a href="/api/logout">Log out</a></li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                </div>
+                <!-- //nav -->
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <!-- inner banner -->
+    <div class="inner-banner-w3ls py-5" id="home">
+        <div class="container py-xl-5 py-lg-3">
+            <!-- register  -->
+            <div class="modal-body mt-md-2 mt-5">
+                <h3 class="title-w3 mb-5 text-center text-wh font-weight-bold">Register Now</h3>
+                <form action="/api/register" method="post">
+                    <div class="form-group">
+                        <label class="col-form-label">Username</label>
+                        <input type="text" class="form-control" placeholder="Username" name="name" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="example@email.com" name="email"
+                            required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="*****" name="password" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Confirm Password</label>
+                        <input type="password" class="form-control" placeholder="*****" name="confirmation" required="">
+                    </div>
+                    <div class="sub-w3l my-3">
+                        <div class="sub-w3layouts_hub">
+                            <input type="checkbox" id="brand1" value="">
+                            <label for="brand1" class="text-li text-style-w3ls">
+                                <span></span>I Accept to the Terms & Conditions</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn button-style-w3">Register</button>
+                </form>
+            </div>
+            <!-- //register -->
+        </div>
+    </div>
+    <!-- //inner banner -->
+
+    <!-- footer -->
+    <footer class="py-5">
+        <div class="container py-xl-4 py-lg-3">
+            <div class="row footer-grids">
+                <div class="col-lg-2 col-6 footer-grid">
+                    <h3 class="mb-sm-4 mb-3 pb-lg-3">Home</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="index.html">Index</a>
+                        </li>
+                        <li>
+                            <a href="index.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Services</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 footer-grid">
+                    <h3 class="mb-sm-4 mb-3 pb-lg-3"> Company</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="index.html">Find a Property</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Our Blog</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Popular Places</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 footer-grid footer-contact mt-lg-0 mt-4">
+                    <h3 class="mb-sm-4 mb-3 pb-lg-3"> Contact Us</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            +61 9999999999
+                        </li>
+                        <li>
+                            <a href="mailto:info@example.com">pba704@uowmail.edu.au</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 footer-grid text-lg-right">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="index.html">Statistical Facts</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Find a Property</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Testimonials</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Apps</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 footer-grid mt-lg-0 mt-4">
+                    <div class="footer-logo">
+                        <h2 class="text-lg-center text-center">
+                            <a class="logo text-wh font-weight-bold" href="index.html"><span
+                                    class="text-bl">Dream home</span></a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+    <!-- copyright -->
+    <div class="copyright-w3ls py-4">
+        <div class="container">
+            <div class="row">
+                
+                <!-- //social icons -->
+            </div>
+        </div>
+    </div>
+    <!-- //copyright -->
+    <!-- move top icon -->
+    <a href="#home" class="move-top text-center">
+        <span class="fa fa-angle-double-up" aria-hidden="true"></span>
+    </a>
+    <!-- //move top icon -->
+
+</body>
+
+</html>
